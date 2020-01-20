@@ -25,6 +25,7 @@ export default function App() {
     setMin(0);
     setNumPalpite(1);
     setPalpite(150);
+    setMsg("");
   };
 
   const acertou = (chute, valor) => {
