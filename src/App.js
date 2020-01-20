@@ -21,6 +21,8 @@ export default function App() {
     setFrase("Informe um número de 0 a 300 e vou tentar descobrir qual é");
     setEstado("ENTRADA");
     setNum("");
+    setMax(300);
+    setMin(0);
     setNumPalpite(1);
     setPalpite(150);
   };
