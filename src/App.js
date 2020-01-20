@@ -29,10 +29,10 @@ export default function App() {
     if (chute === valor) {
       setEstado("ACERTOU");
       if (numPalpite === 1) {
-        toast(`Yes!!! Acertei com ${numPalpite} palpite :D`, "green");
+        toast(`Yes!!! Acertei com ${numPalpite + 1} palpite :D`, "green");
         return;
       }
-      toast(`Yes!!! Acertei com ${numPalpite} palpites :D`, "green");
+      toast(`Yes!!! Acertei com ${numPalpite + 1} palpites :D`, "green");
       return;
     }
   };
