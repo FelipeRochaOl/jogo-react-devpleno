@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300&display=swap");
+html,
+body {
+  background-color: #2d2d35;
+}
+.React {
+  width: 100px;
+  padding: 15px 10px;
+}
+.App {
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  color: white;
+}
+h3 {
+  color: #66ccec;
+}
