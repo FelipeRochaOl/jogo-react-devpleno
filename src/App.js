@@ -21,6 +21,8 @@ export default function App() {
     setFrase("Informe um número de 0 a 300 e vou tentar descobrir qual é");
     setEstado("ENTRADA");
     setNum("");
+    setMax(300);
+    setMin(0);
     setNumPalpite(1);
     setPalpite(150);
   };
@@ -29,10 +31,10 @@ export default function App() {
     if (chute === valor) {
       setEstado("ACERTOU");
       if (numPalpite === 1) {
-        toast(`Yes!!! Acertei com ${numPalpite} palpite :D`, "green");
+        toast(`Yes!!! Acertei com ${numPalpite + 1} palpite :D`, "green");
         return;
       }
-      toast(`Yes!!! Acertei com ${numPalpite} palpites :D`, "green");
+      toast(`Yes!!! Acertei com ${numPalpite + 1} palpites :D`, "green");
       return;
     }
   };
@@ -105,7 +107,7 @@ export default function App() {
               </div>
               <button
                 id="guardar"
-                className="btn waves-effect"
+                className="btn waves-effect pulse"
                 name="action"
                 onClick={guardaNum}
               >
@@ -127,7 +129,7 @@ export default function App() {
             </button>
             <button
               id="maior"
-              className="btn waves-effect pulse"
+              className="btn waves-effect"
               name="action"
               onClick={estadoInicial}
             >
@@ -146,9 +148,6 @@ export default function App() {
         {estado === "ACERTOU" && (
           <div>
             <p>ACERTOU</p>
-            <p>
-              Precisei de {numPalpite} palpite{s} para acertar!
-            </p>
             <button
               id="maior"
               className="btn waves-effect pulse"
