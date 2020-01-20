@@ -105,7 +105,7 @@ export default function App() {
               </div>
               <button
                 id="guardar"
-                className="btn waves-effect"
+                className="btn waves-effect pulse"
                 name="action"
                 onClick={guardaNum}
               >
@@ -127,7 +127,7 @@ export default function App() {
             </button>
             <button
               id="maior"
-              className="btn waves-effect pulse"
+              className="btn waves-effect"
               name="action"
               onClick={estadoInicial}
             >
@@ -146,9 +146,6 @@ export default function App() {
         {estado === "ACERTOU" && (
           <div>
             <p>ACERTOU</p>
-            <p>
-              Precisei de {numPalpite} palpite{s} para acertar!
-            </p>
             <button
               id="maior"
               className="btn waves-effect pulse"
