@@ -12,7 +12,7 @@ export default function App() {
   const [palpite, setPalpite] = useState(150);
   const [numPalpite, setNumPalpite] = useState(1);
   const [min, setMin] = useState(0);
-  const [max, setMax] = useState(300);
+  const [max, setMax] = useState(301);
   const [color, setColor] = useState();
   const [msg, setMsg] = useState();
 
@@ -21,21 +21,20 @@ export default function App() {
     setFrase("Informe um número de 0 a 300 e vou tentar descobrir qual é");
     setEstado("ENTRADA");
     setNum("");
-    setMax(300);
-    setMin(0);
     setNumPalpite(1);
     setPalpite(150);
-    setMsg("");
+    setMin(0);
+    setMax(301);
   };
 
   const acertou = (chute, valor) => {
     if (chute === valor) {
       setEstado("ACERTOU");
       if (numPalpite === 1) {
-        toast(`Yes!!! Acertei com ${numPalpite + 1} palpite :D`, "green");
+        toast(`Yes!!! Acertei com ${numPalpite} palpite :D`, "green");
         return;
       }
-      toast(`Yes!!! Acertei com ${numPalpite + 1} palpites :D`, "green");
+      toast(`Yes!!! Acertei com ${numPalpite} palpites :D`, "green");
       return;
     }
   };
@@ -65,7 +64,7 @@ export default function App() {
     setNumPalpite(numPalpite + 1);
   };
 
-  const guardaNum = event => {
+  const guardaNum = (event) => {
     event.preventDefault();
     const numero = parseInt(num);
     if (!Number.isInteger(numero) || numero > 300) {
@@ -102,7 +101,7 @@ export default function App() {
                   id="icon_prefix2"
                   className="materialize-textarea white-text"
                   value={num}
-                  onChange={e => setNum(e.target.value)}
+                  onChange={(e) => setNum(e.target.value)}
                 />
                 <label htmlFor="icon_prefix2">Digite aqui o número</label>
               </div>
@@ -160,7 +159,7 @@ export default function App() {
           </div>
         )}
       </div>
-      {msg && <div class={color}>{msg}</div>}
+      {msg && <div className={color}>{msg}</div>}
     </div>
   );
 }
