@@ -12,6 +12,17 @@ body {
   text-align: center;
   color: white;
 }
+h1,
 h3 {
   color: #66ccec;
+}
+button {
+  border: 1px solid white;
+  background: transparent;
+  padding: 10px;
+  color: white;
+  margin: 2px;
+}
+button:visited {
+  background: #2d2d35;
 }
